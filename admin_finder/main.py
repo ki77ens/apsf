@@ -1,6 +1,4 @@
-import requests
-import sys
-import logging
+import requests, sys, logging
 from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore as f
 import pyuseragents as agent
