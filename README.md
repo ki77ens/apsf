@@ -23,7 +23,7 @@ The "Admin panel & Subdomain finder" is a Python script designed to verify the a
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/ava1e/apf.git
+    git clone https://github.com/ava1e/apsf.git
     ```
 
 2. **Execute the Script:**
