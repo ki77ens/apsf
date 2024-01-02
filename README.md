@@ -1,44 +1,51 @@
 # Page Checker
 
-This script checks the status of multiple pages by sending HTTP requests to the provided URL concatenated with paths from a file. It utilizes the `requests` library to send GET requests and check the status code of each page.
+## Description
+
+The "Page Checker" is a Python script designed to verify the availability and accessibility of multiple web pages or subdomains on a web server. By utilizing the `requests` library, this tool checks the existence of URLs by appending paths or subdomains to a provided base URL.
+
+## Features
+
+- **Multi-threaded Processing:** Employs ThreadPoolExecutor to execute multiple HTTP requests concurrently, enabling efficient checking of numerous pages simultaneously.
+- **Logging:** Captures detailed information about each checked page, segregating findings into two log files (`found.log` and `not_found.log`) for future reference and analysis.
+- **User-Agent Rotation:** Uses the `pyuseragents` library to randomize User-Agent headers in each request, mimicking different clients and enhancing anonymity.
+- **Mode Selection:** Supports two modes of operation - `subdomains` and `links` - allowing users to check subdomains or specific paths respectively.
 
 ## Usage
 
 ### Prerequisites
 - Python 3
 - `colorama` library (Install using `pip install colorama`)
+- `pyuseragents` library (Install using `pip install pyuseragents`)
 
-### How to Use
+### Running the Script
 
-1. **Clone the repository or download the script:**
-
-    ```bash
-    git clone https://github.com/ava1e/page_checker.git
-    ```
-
-2. **Run the script:**
+1. **Clone the Repository:**
 
     ```bash
-    python main.py <URL> <file_path>
+    git clone https://github.com/ava1e/apf.git
     ```
 
-    Replace `<URL>` with the base URL to which you want to append paths, and `<file_path>` with the path to the file containing paths to check.
+2. **Execute the Script:**
+
+    ```bash
+    python main.py <URL> <file_path> <subdomains_file> <mode: subdomains/links>
+    ```
+
+    Replace `<URL>` with the base URL, `<file_path>` with the file containing paths or links to check, `<subdomains_file>` with the file containing subdomains, and `<mode>` with either `subdomains` or `links`.
 
     Example:
     ```bash
-    python main.py https://example.com wordlist.txt
+    python main.py https://example.com paths_to_check.txt subdomains.txt links
     ```
 
 3. **Output:**
 
-    The script will output the status of each checked page.
-    - `[ + ] PAGE FOUND - <URL>/<path>` indicates that the page exists.
-    - `[ - ] PAGE NOT FOUND - <URL>/<path>` indicates that the page does not exist.
-    - `FINISHED` indicates the completion of checking.
+    The script displays the status of each checked page or subdomain. Additionally, it logs found and not found pages into separate log files and prints a `FINISHED` message upon completion.
 
 ## Notes
-- The script checks each path in the provided file and concatenates it to the URL to form the request.
-- It evaluates the HTTP status code received from the server to determine the existence of the page.
-- If the status code is not 301 (Moved Permanently) or 404 (Not Found), it considers the page to exist.
-- Make sure to handle large lists of paths cautiously to avoid excessive network requests.
 
+- Exercise caution when handling large lists of paths or subdomains to prevent excessive network requests and ensure optimal performance.
+- Detailed information about each request's status is available in the generated log files (`found.log` and `not_found.log`), aiding in further analysis and review.
+
+Feel free to contribute or report issues via pull requests or by creating an issue on the repository.
