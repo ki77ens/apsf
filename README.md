@@ -2,7 +2,7 @@
 
 ## Description
 
-The "Page Checker" is a Python script designed to verify the availability and accessibility of multiple web pages or subdomains on a web server. By utilizing the `requests` library, this tool checks the existence of URLs by appending paths or subdomains to a provided base URL.
+The "Admin panel & Subdomain finder" is a Python script designed to verify the availability and accessibility of multiple web pages or subdomains on a web server. By utilizing the `requests` library, this tool checks the existence of URLs by appending paths or subdomains to a provided base URL.
 
 ## Features
 
