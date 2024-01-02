@@ -36,7 +36,7 @@ The "Page Checker" is a Python script designed to verify the availability and ac
 
     Example:
     ```bash
-    python main.py https://www.example.com paths_to_check.txt subdomains.txt links
+    python main.py https://www.example.com links.txt subdomains.txt links
     
     python main.py example.com links.txt subdomains.txt subdomains
     ```
