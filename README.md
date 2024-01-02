@@ -1,4 +1,4 @@
-# Page Checker
+# Admin panel & Subdomain finder
 
 ## Description
 
@@ -36,7 +36,9 @@ The "Page Checker" is a Python script designed to verify the availability and ac
 
     Example:
     ```bash
-    python main.py https://example.com paths_to_check.txt subdomains.txt links
+    python main.py https://www.example.com paths_to_check.txt subdomains.txt links
+    
+    python main.py example.com links.txt subdomains.txt subdomains
     ```
 
 3. **Output:**
@@ -47,5 +49,3 @@ The "Page Checker" is a Python script designed to verify the availability and ac
 
 - Exercise caution when handling large lists of paths or subdomains to prevent excessive network requests and ensure optimal performance.
 - Detailed information about each request's status is available in the generated log files (`found.log` and `not_found.log`), aiding in further analysis and review.
-
-Feel free to contribute or report issues via pull requests or by creating an issue on the repository.
