@@ -14,9 +14,9 @@ The "Admin panel & Subdomain finder" is a Python script designed to verify the a
 ## Usage
 
 ### Prerequisites
-- Python 3
-- `colorama` library (Install using `pip install colorama`)
-- `pyuseragents` library (Install using `pip install pyuseragents`)
+- [`Python 3`](https://www.python.org/downloads/)
+- [`colorama`](https://pypi.org/project/colorama/) library (Install using `pip install colorama`)
+- [`pyuseragents`](https://pypi.org/project/pyuseragents/) library (Install using `pip install pyuseragents`)
 
 ### Running the Script
 
