@@ -20,13 +20,13 @@ The "Admin panel & Subdomain finder" is a Python script designed to verify the a
 
 ### Running the Script
 
-1. **Clone the Repository:**
+1. **Clone the Repository**
 
     ```bash
     git clone https://github.com/ava1e/apsf.git
     ```
 
-2. **Execute the Script:**
+2. **Execute the Script**
 
     ```bash
     python main.py <URL> <file_path> <subdomains_file> <mode: subdomains/links>
@@ -34,7 +34,7 @@ The "Admin panel & Subdomain finder" is a Python script designed to verify the a
 
     Replace `<URL>` with the base URL, `<file_path>` with the file containing paths or links to check, `<subdomains_file>` with the file containing subdomains, and `<mode>` with either `subdomains` or `links`.
 
-    Example:
+    Example
     ```bash
     python main.py https://www.example.com links.txt subdomains.txt links
     
